@@ -1,0 +1,72 @@
+/* 
+   ------------------------------- GENERAL -------------------------------
+*/
+
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", cursive;
+  }
+
+  section {
+    background-color: black;
+  }
+
+  .loading {
+      color: white;
+  }
+
+/* 
+   ------------------------------- LANDING-PAGE -------------------------------
+*/
+
+#landing-page {
+    min-height: 100vh;
+  }
+
+.container {
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 
+    ------------------------------- NAVIGATION -------------------------------
+*/
+
+#personal-logo {
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    padding: 0 20px;
+  }
+
+  .nav__link--list {
+    display: flex;
+  }
+  
+  .nav__link {
+    margin: 0 12px;
+    color: white;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  .star__wars {
+      color: white;
+  }
