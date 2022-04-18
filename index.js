@@ -83,7 +83,7 @@ async function renderFilms(url){
     console.log("The link of the film " + film.title + " was pressed");
     htmlSegment = `<div class="film__details">
                 <p>Film title: ${film.title}</p>
-                <p>Was on episode: ${film.episode_id}</p>
+                <p>Producer/s: ${film.producer}</p>
                 <p>Director: ${film.director}</p>
                 <p>Release date: ${film.release_date}</p>
                 </div>`;
