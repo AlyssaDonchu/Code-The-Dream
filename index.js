@@ -13,14 +13,14 @@ async function getApiData(url) {
 }
 
 async function renderCharacters(url) {
-    let loader = document.querySelector('.loading')
+    let loader = document.querySelector('.loading');
     let characters = await getApiData(url);
 
 //----------------------------------- If there's an API response, hides the loader -------------------------------\\
 
-    if(characters) hideloader()
+    if(characters) hideloader();
     let html = '';
-    console.log(characters)
+    console.log(characters);
 
 //----------------------------------- Goes through each character -------------------------------------------------\\
 
@@ -44,7 +44,7 @@ async function renderCharacters(url) {
             html += htmlSegment;
     }
 
-    html += '</div>'
+    html += '</div>';
         
     });
 
@@ -54,7 +54,7 @@ async function renderCharacters(url) {
     container.innerHTML += html;
 
     let nextPageURL = characters.next;
-    renderAllPages(nextPageURL)
+    renderAllPages(nextPageURL);
 }
 
 //----------------------------------- Function to render all pages -------------------------------------------------\\
@@ -63,7 +63,7 @@ async function renderAllPages(url){
     if(url){
         renderCharacters(url);
     }
-    else console.log('All Character pages were rendered')
+    else console.log('All Character pages were rendered');
 }
 
 //----------------------------------- Function to hide the loader --------------------------------------------------\\
@@ -78,18 +78,18 @@ async function renderFilms(url){
     document.querySelector('.loading').style.marginTop = '10px';
     document.querySelector('.loading').style.fontSize = '20px';
     document.querySelector('.loading').style.display = 'flex';
-    document.querySelector('.loading').innerHTML = "Loading data..."
-    let film = await getApiData(url)
-    console.log(film.title)
+    document.querySelector('.loading').innerHTML = "Loading data...";
+    let film = await getApiData(url);
+    console.log("The link of the film " + film.title + " was pressed");
     htmlSegment = `<div class="film__details">
                 <p>Film title: ${film.title}</p>
                 <p>Was on episode: ${film.episode_id}</p>
                 <p>Director: ${film.director}</p>
                 <p>Release date: ${film.release_date}</p>
-                </div>`
+                </div>`;
 
-    document.querySelector('.loading').innerHTML = htmlSegment
+    document.querySelector('.loading').innerHTML = htmlSegment;
 
 }
 
-renderCharacters('https://swapi.dev/api/people/')
+renderCharacters('https://swapi.dev/api/people/');
